@@ -13,3 +13,10 @@ MovieList\*N
 -NetFlix-GPT
 -Search Bar
 -Movie Suggestions
+
+# already done
+
+setup react
+setup tailwind
+header
+login form (formik library for validation form in react)
