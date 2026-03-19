@@ -4,19 +4,20 @@ import Header from "./Header";
 const Login = () => {
   const [isSignInForm, setIsSignInForm] = useState(true);
 
-  const toggleSignInForm = () => {
+  const handleClick = () => {
     setIsSignInForm(!isSignInForm);
   };
+
   return (
     <div>
       <Header />
       <div className="absolute">
         <img
-          src="https://assets.nflxext.com/ffe/siteui/vlv3/4371a395-0e42-46ae-be36-5755eebc638b/web/IN-en-20260209-TRIFECTA-perspective_3a6d8659-ddfe-4547-9584-dce64c02c230_large.jpg"
-          alt="homepageimg"
+          src="https://assets.nflxext.com/ffe/siteui/vlv3/7ea4545e-42d3-4ebf-82fd-0e1984dc6375/web/IN-en-20260316-TRIFECTA-perspective_789c5633-3949-4708-8e6c-8ddfd22ed696_large.jpg"
+          alt="backgroundimg"
         />
       </div>
-      <form className="absolute p-12 bg-black w-3/12 my-36 mx-auto right-0 left-0 text-white rounded-lg bg-opacity-70 ">
+      <form className="w-3/12 absolute p-12 bg-black my-24 mx-auto left-0 right-0 text-white rounded-lg bg-opacity-80">
         <h1 className="font-bold text-3xl py-4">
           {isSignInForm ? "Sign In" : "Sign Up"}
         </h1>
@@ -24,26 +25,26 @@ const Login = () => {
           <input
             type="text"
             placeholder="Full Name"
-            className="p-2 my-2 w-full bg-gray-700"
+            className="my-2 p-3 w-full bg-gray-700"
           />
         )}
         <input
           type="email"
           placeholder="Email Address"
-          className="p-2 my-2 w-full bg-gray-700"
+          className="my-2 p-3 w-full bg-gray-700"
         />
         <input
           type="password"
-          placeholder="Password"
-          className="p-2 my-2 w-full bg-gray-700"
+          placeholder="Enter Password"
+          className="my-2 p-3 w-full bg-gray-700"
         />
-        <button className="p-3 my-4 bg-red-700 w-full rounded-lg ">
+        <button className="my-4 p-4 w-full bg-red-700 rounded-lg">
           {isSignInForm ? "Sign In" : "Sign Up"}
         </button>
-        <p className="py-4 cursor-pointer " onClick={toggleSignInForm}>
+        <p onClick={handleClick} className="py-4 cursor-pointer">
           {isSignInForm
-            ? "New to Netflix? Sign Up Now."
-            : "Already Registered? Sign In Now."}
+            ? "New to Netflix? Sign Up now"
+            : "Already registered ? Sign In now"}
         </p>
       </form>
     </div>
