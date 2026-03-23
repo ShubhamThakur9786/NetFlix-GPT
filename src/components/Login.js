@@ -7,16 +7,14 @@ import {
   signInWithEmailAndPassword,
   updateProfile,
 } from "firebase/auth";
-import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addUser } from "../utils/userSlice";
+import { USER_ICON } from "../utils/constants";
 
 const Login = () => {
   const [isSignInForm, setIsSignInForm] = useState(true);
   const [errorMessage, setErrorMessage] = useState(null);
   const dispatch = useDispatch();
-
-  const navigate = useNavigate();
 
   const email = useRef(null);
   const password = useRef(null);
@@ -43,8 +41,7 @@ const Login = () => {
           // console.log(user);
           updateProfile(user, {
             displayName: name.current.value,
-            photoURL:
-              "https://i.pinimg.com/736x/44/a7/e3/44a7e3253fab47070f91e5b7181c62d3.jpg",
+            photoURL: USER_ICON,
           })
             .then(() => {
               // Profile updated!
@@ -58,7 +55,6 @@ const Login = () => {
                   photoURL: photoURL,
                 })
               );
-              navigate("/browse");
             })
             .catch((error) => {
               // An error occurred
@@ -84,7 +80,6 @@ const Login = () => {
           // Signed in
           const user = userCredential.user;
           console.log(user);
-          navigate("/browse");
           // ...
         })
         .catch((error) => {
