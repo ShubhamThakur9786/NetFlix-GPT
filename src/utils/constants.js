@@ -12,3 +12,16 @@ export const API_OPTIONS = {
       "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjYyMmMyMzViYTE4ZGY4YTRiOTk3YjE3MjU2ODAzNSIsIm5iZiI6MTc3NDE5MzA4MC44MDcwMDAyLCJzdWIiOiI2OWMwMDliODNjMWZmYzJjZTMxYjBjM2QiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.AZQYRuB2q9C2biQQfrN5FpPWLHEvAFyiN-GxCQ03bCU",
   },
 };
+
+export const IMG_CDN_URL = "https://image.tmdb.org/t/p/w500";
+
+export const VID_CDN_URL = "https://api.themoviedb.org/3/movie";
+
+export const BG_URL =
+  "https://assets.nflxext.com/ffe/siteui/vlv3/7ea4545e-42d3-4ebf-82fd-0e1984dc6375/web/IN-en-20260316-TRIFECTA-perspective_789c5633-3949-4708-8e6c-8ddfd22ed696_large.jpg";
+
+export const SUPPORTED_LANGUAGES = [
+  { identifier: "en", name: "English" },
+  { identifier: "hindi", name: "Hindi" },
+  { identifier: "spanish", name: "Spanish" },
+];
